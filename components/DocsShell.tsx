@@ -20,20 +20,20 @@ export default function DocsShell({
   const t = UI[lang];
 
   const nav = (
-    <nav className="space-y-6 text-sm">
+    <nav className="space-y-7 text-sm">
       <Link
         href={`/${lang}/docs`}
         className={
           activeSlug === ''
-            ? 'font-bold text-x-cyan'
-            : 'text-x-muted transition-colors hover:text-x-cyan'
+            ? 'block font-medium text-zinc-900 dark:text-zinc-50'
+            : 'block text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100'
         }
       >
         {t.docs.overview}
       </Link>
       {sections.map((section) => (
         <div key={section.id}>
-          <p className="mb-2 text-xs font-bold uppercase tracking-widest text-x-muted">
+          <p className="mb-2 text-xs font-medium uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
             {section.title[lang]}
           </p>
           <ul className="space-y-1.5">
@@ -45,8 +45,8 @@ export default function DocsShell({
                     href={`/${lang}/docs/${page.slug}`}
                     className={
                       active
-                        ? 'font-bold text-x-cyan'
-                        : 'text-x-muted transition-colors hover:text-x-text'
+                        ? 'font-medium text-zinc-900 dark:text-zinc-50'
+                        : 'text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100'
                     }
                   >
                     {page.title}
@@ -63,16 +63,16 @@ export default function DocsShell({
   return (
     <>
       <Navbar lang={lang} path={path} />
-      <div className="mx-auto flex w-full max-w-6xl flex-1 items-start gap-10 px-6 py-10">
-        <aside className="sticky top-20 hidden w-64 shrink-0 lg:block">{nav}</aside>
+      <div className="mx-auto flex w-full max-w-5xl flex-1 items-start gap-12 px-6 py-12">
+        <aside className="sticky top-20 hidden w-52 shrink-0 lg:block">{nav}</aside>
         <div className="min-w-0 flex-1">
-          <details className="mb-6 rounded-xl border border-x-border bg-x-panel px-4 py-3 lg:hidden">
-            <summary className="cursor-pointer text-sm font-bold text-x-text">
+          <details className="mb-8 rounded-xl border border-zinc-200 px-4 py-3 lg:hidden dark:border-zinc-800">
+            <summary className="cursor-pointer text-sm font-medium text-zinc-900 dark:text-zinc-50">
               {t.docs.menu}
             </summary>
-            <div className="pt-4">{nav}</div>
+            <div className="pt-5">{nav}</div>
           </details>
-          <article className="docs-prose">{children}</article>
+          <article className="docs-prose max-w-2xl">{children}</article>
         </div>
       </div>
       <Footer lang={lang} />

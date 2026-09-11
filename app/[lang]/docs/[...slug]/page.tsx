@@ -49,20 +49,23 @@ export default async function DocPage({
       sections={sections}
       activeSlug={slug.join('/')}
     >
-      <p className="mb-6 text-xs uppercase tracking-widest text-x-muted">
-        <Link href={`/${lang}/docs`} className="hover:text-x-cyan">
+      <p className="mb-8 text-xs text-zinc-400 dark:text-zinc-500">
+        <Link
+          href={`/${lang}/docs`}
+          className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+        >
           {t.docs.overview}
         </Link>
-        {' / '}
+        <span className="mx-2">/</span>
         {getSectionTitle(page.section, lang)}
       </p>
       <Markdown markdown={page.markdown} lang={lang} section={page.section} />
-      <p className="mt-12 border-t border-x-border pt-6 text-sm">
+      <p className="mt-12 border-t border-zinc-200 pt-6 text-sm dark:border-zinc-800">
         <a
           href={getWikiSourceUrl(lang, page.section, page.file)}
           target="_blank"
           rel="noreferrer"
-          className="text-x-muted transition-colors hover:text-x-cyan"
+          className="text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
         >
           {t.docs.edit}
         </a>

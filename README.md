@@ -34,8 +34,9 @@ source on GitHub.
 ## Stack
 
 - **Next.js 16** (App Router) with fully static export.
-- **Tailwind CSS 4** with the X palette.
-- **@xscriptor/xcomponents** — `XDecryptedText` (hero) and `XRepoCard` (repo grid).
+- **Tailwind CSS 4** with a monochrome design system (black/gray in light, white/gray
+  in dark) and a light/dark toggle.
+- **Geist** Sans and Mono via `next/font`.
 - **react-markdown** + **remark-gfm** for the docs.
 
 ## Structure

@@ -14,6 +14,7 @@ export interface UIStrings {
     language: string;
   };
   hero: {
+    title: string;
     tagline: string;
     ctaDocs: string;
     ctaGithub: string;
@@ -54,6 +55,7 @@ export const UI: Record<Lang, UIStrings> = {
       language: 'Language',
     },
     hero: {
+      title: 'Documentation & tools',
       tagline:
         'A minimal Arch-based distribution, its tooling and its documentation — all in one place.',
       ctaDocs: 'Read the docs',
@@ -98,6 +100,7 @@ export const UI: Record<Lang, UIStrings> = {
       language: 'Idioma',
     },
     hero: {
+      title: 'Documentación y herramientas',
       tagline:
         'Una distribución minimalista basada en Arch, su tooling y su documentación — todo en un solo lugar.',
       ctaDocs: 'Leer la documentación',

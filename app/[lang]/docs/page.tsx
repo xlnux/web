@@ -34,15 +34,17 @@ export default async function DocsHome({
   return (
     <DocsShell lang={lang} path="/docs" sections={sections} activeSlug="">
       <Markdown markdown={overview} lang={lang} section="overview" />
-      <div className="mt-12 grid gap-5 sm:grid-cols-2">
+      <div className="mt-12 grid gap-3 sm:grid-cols-2">
         {sections.map((section) => (
           <Link
             key={section.id}
             href={`/${lang}/docs/${section.pages[0].slug}`}
-            className="rounded-2xl border border-x-border bg-x-panel p-6 transition-colors hover:border-x-purple"
+            className="group rounded-xl border border-zinc-200 p-4 transition-colors hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/40"
           >
-            <h3 className="font-bold text-x-text">{section.title[lang]}</h3>
-            <p className="mt-2 text-sm text-x-muted">
+            <h3 className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              {section.title[lang]}
+            </h3>
+            <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
               {section.pages.length} {t.docs.pages}
             </p>
           </Link>

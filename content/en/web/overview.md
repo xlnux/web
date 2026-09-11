@@ -7,9 +7,9 @@ landing page and a browsable docs section, in English and Spanish.
 ## Stack
 
 - **Next.js** (App Router) with static export to GitHub Pages.
-- **Tailwind CSS 4** with the X palette.
-- **@xscriptor/xcomponents** — `XDecryptedText` for the hero and `XRepoCard` for the
-  repository grid.
+- **Tailwind CSS 4** with a monochrome design system: black and gray scales in the
+  light theme, white and gray scales in the dark theme.
+- **Geist** Sans and Mono, with a light/dark toggle.
 - **react-markdown** + **remark-gfm** to render the markdown under `content/`.
 
 ## Adding or updating a page

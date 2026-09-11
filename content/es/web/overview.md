@@ -7,9 +7,9 @@ con una landing y una sección de docs navegable, en inglés y español.
 ## Stack
 
 - **Next.js** (App Router) con export estático a GitHub Pages.
-- **Tailwind CSS 4** con la paleta X.
-- **@xscriptor/xcomponents** — `XDecryptedText` para el hero y `XRepoCard` para la
-  grilla de repositorios.
+- **Tailwind CSS 4** con un sistema de diseño monocromo: escalas de negro y grises
+  en el tema claro, escalas de blanco y grises en el tema oscuro.
+- **Geist** Sans y Mono, con toggle claro/oscuro.
 - **react-markdown** + **remark-gfm** para renderizar el markdown de `content/`.
 
 ## Añadir o actualizar una página
