@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@source "../node_modules/@xscriptor/xcomponents/dist";
+
+@theme {
+  --color-x-bg: #05060a;
+  --color-x-panel: #0b0e14;
+  --color-x-border: #1e2432;
+  --color-x-text: #e8eaf0;
+  --color-x-muted: #8b94a7;
+  --color-x-purple: #bc13fe;
+  --color-x-cyan: #00d2ff;
+  --color-x-pink: #ff0055;
+  --color-x-green: #00ff99;
+  --color-x-gold: #ffb700;
+  --color-x-white: #f5f5f5;
+}
+
+@theme inline {
+  --font-sans: var(--font-hack);
+  --font-mono: var(--font-hack);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-x-bg);
+  color: var(--color-x-text);
+}
+
+::selection {
+  background: var(--color-x-purple);
+  color: var(--color-x-bg);
+}
+
+.docs-prose {
+  line-height: 1.75;
+}
+
+.docs-prose > * + * {
+  margin-top: 1.25rem;
+}
+
+.docs-prose h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.docs-prose h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-x-border);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.docs-prose h3 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.docs-prose h4 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+
+.docs-prose a {
+  color: var(--color-x-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.docs-prose a:hover {
+  color: var(--color-x-purple);
+}
+
+.docs-prose strong {
+  color: var(--color-x-white);
+}
+
+.docs-prose ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.docs-prose ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+.docs-prose li + li {
+  margin-top: 0.4rem;
+}
+
+.docs-prose code {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 0.3rem;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.875em;
+}
+
+.docs-prose pre {
+  overflow-x: auto;
+  border: 1px solid var(--color-x-border);
+  border-radius: 0.75rem;
+  background: #05070c;
+  padding: 1rem;
+}
+
+.docs-prose pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--color-x-green);
+}
+
+.docs-prose blockquote {
+  border-left: 3px solid var(--color-x-purple);
+  padding-left: 1rem;
+  color: var(--color-x-muted);
+}
+
+.docs-prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.docs-prose th,
+.docs-prose td {
+  border: 1px solid var(--color-x-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.docs-prose th {
+  background: var(--color-x-panel);
+  color: var(--color-x-white);
+}
+
+.docs-prose hr {
+  border-color: var(--color-x-border);
+}
+
+.docs-prose img {
+  max-width: 100%;
+}

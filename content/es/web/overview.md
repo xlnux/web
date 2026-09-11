@@ -1,0 +1,25 @@
+# web — portal de documentación
+
+`xlnux/web` es el portal de documentación del proyecto X Linux. Reúne la
+documentación de todos los repositorios (con origen en `xlnux/wiki`) y la presenta
+con una landing y una sección de docs navegable, en inglés y español.
+
+## Stack
+
+- **Next.js** (App Router) con export estático a GitHub Pages.
+- **Tailwind CSS 4** con la paleta X.
+- **@xscriptor/xcomponents** — `XDecryptedText` para el hero y `XRepoCard` para la
+  grilla de repositorios.
+- **react-markdown** + **remark-gfm** para renderizar el markdown de `content/`.
+
+## Añadir o actualizar una página
+
+1. Añade o edita el markdown en `content/en/<seccion>/` y `content/es/<seccion>/`.
+2. Registra los archivos nuevos en el manifiesto `SECTIONS` de `lib/docs.ts`.
+3. Haz push a `main`; el workflow de deploy publica el sitio.
+
+## Despliegue
+
+`.github/workflows/deploy.yml` ejecuta `npm ci && npm run build` y despliega el
+export estático (`out/`) en GitHub Pages. El sitio se sirve bajo el base path `/web`
+en `https://xlnux.github.io/web/`.
