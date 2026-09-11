@@ -6,7 +6,7 @@ export default function Hero({ lang }: { lang: Lang }) {
   const t = UI[lang];
 
   return (
-    <section className="px-6 pb-20 pt-24 sm:pt-28">
+    <section className="px-6 pb-12 pt-24 sm:pt-28">
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
           X Linux

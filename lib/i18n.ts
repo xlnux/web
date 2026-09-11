@@ -19,6 +19,13 @@ export interface UIStrings {
     ctaDocs: string;
     ctaGithub: string;
   };
+  downloads: {
+    title: string;
+    iso: string;
+    wsl: string;
+    isoDetail: string;
+    wslDetail: string;
+  };
   landing: {
     reposTitle: string;
     reposSubtitle: string;
@@ -60,6 +67,13 @@ export const UI: Record<Lang, UIStrings> = {
         'A minimal Arch-based distribution, its tooling and its documentation — all in one place.',
       ctaDocs: 'Read the docs',
       ctaGithub: 'GitHub',
+    },
+    downloads: {
+      title: 'Downloads',
+      iso: 'Download ISO',
+      wsl: 'Download for WSL',
+      isoDetail: 'Live ISO · x86_64',
+      wslDetail: 'WSL rootfs',
     },
     landing: {
       reposTitle: 'Repositories',
@@ -105,6 +119,13 @@ export const UI: Record<Lang, UIStrings> = {
         'Una distribución minimalista basada en Arch, su tooling y su documentación — todo en un solo lugar.',
       ctaDocs: 'Leer la documentación',
       ctaGithub: 'GitHub',
+    },
+    downloads: {
+      title: 'Descargas',
+      iso: 'Descargar ISO',
+      wsl: 'Descargar para WSL',
+      isoDetail: 'ISO en vivo · x86_64',
+      wslDetail: 'rootfs para WSL',
     },
     landing: {
       reposTitle: 'Repositorios',

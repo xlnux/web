@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Hero from './Hero';
+import Downloads from './Downloads';
 import RepoGrid from './RepoGrid';
 import { UI, type Lang } from '@/lib/i18n';
 
@@ -13,6 +14,7 @@ export default function Landing({ lang }: { lang: Lang }) {
       <Navbar lang={lang} path="" />
       <main className="flex-1">
         <Hero lang={lang} />
+        <Downloads lang={lang} />
         <RepoGrid lang={lang} />
 
         <section className="mx-auto max-w-5xl border-t border-zinc-200 px-6 py-16 dark:border-zinc-800">
