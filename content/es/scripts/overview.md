@@ -34,7 +34,6 @@ de packaging y el ROADMAP del workspace).
 - `migrations/`, `themes/` — migraciones por usuario y temas por paleta.
 - `packaging/` — el PKGBUILD de `x-scripts` y el generador del snapshot de
   config offline (`vendor-config.sh`).
-- `wsl/` — bootstrap WSL legacy (se mantiene; previsto unificarlo con el
   payload).
 - `test/` — tests locales sin root (`test/smoke.sh`).
 
@@ -55,11 +54,14 @@ Ver `cli.md`, `provisioning.md`, `hyprland.md` y `packaging.md`.
 
 ## Fuentes de configuración
 
-Las configs de escritorio (Hyprland/kitty/nvim) **no** se mantienen en esta
-organización: viven en repos externos (`xscriptor-colors/hyprland`,
-`xscriptor-colors/terminal`, `xscriptor-colors/nvim`, rama `main`) que se usan
-de solo lectura. Un snapshot se vende dentro del paquete para uso offline. Ver
-`hyprland.md` y ADR-0005.
+Las configs de escritorio **no** se mantienen en esta organización: la org
+equisdots es dueña del stack (`equisdots/hyprland`, `equisdots/shell`,
+`equisdots/palettes`, `equisdots/theme-sync`, `equisdots/davincix`,
+`equisdots/timex`, `equisdots/login`, `equisdots/dots`, rama `main`) y las
+configs de apps vienen de `xscriptor-colors/terminal` (kitty/starship) y
+`xscriptor-colors/nvim`. Todas se usan de solo lectura; el instalador oficial
+es `equisdots/dots`. Un snapshot de todo el stack se vende dentro del paquete
+para uso offline. Ver `hyprland.md` y ADR-0005.
 
 ## Rama y estado
 
@@ -68,6 +70,6 @@ existe un `x/reboot` local de referencia). El seguimiento de fases en el
 `ROADMAP.md` de este repo y del workspace está mayormente completo hasta la
 etapa "distro instalable"; restos de auditoría pendientes para este repo
 incluyen `x-base.packages` sin consumidor, pulido de CLI, más cobertura de
-tests para helpers/fases y la unificación de `wsl/`. El progreso y las
 decisiones viven en los `ROADMAP.md`/`DECISIONS.md` de la raíz del workspace
 (`x-lnux`).
+WSL lives in its dedicated repos: xlnux/wsl and xlnux/wsl-scripts.
