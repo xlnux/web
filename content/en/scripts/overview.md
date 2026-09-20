@@ -33,7 +33,6 @@ out of scope for packaging (see the packaging doc and the workspace ROADMAP).
 - `migrations/`, `themes/` — per-user migrations and palette themes.
 - `packaging/` — the `x-scripts` PKGBUILD and the offline config snapshot
   generator (`vendor-config.sh`).
-- `wsl/` — legacy WSL bootstrap (kept; planned to be unified with the payload).
 - `test/` — local tests without root (`test/smoke.sh`).
 
 ## Role in the system
@@ -53,11 +52,14 @@ See `cli.md`, `provisioning.md`, `hyprland.md` and `packaging.md`.
 
 ## Configuration sources
 
-The desktop configs (Hyprland/kitty/nvim) are **not** maintained in this
-organization: they live in external repos
-(`xscriptor-colors/hyprland`, `xscriptor-colors/terminal`,
-`xscriptor-colors/nvim`, branch `main`) that are used read-only. A snapshot is
-vendored into the package for offline use. See `hyprland.md` and ADR-0005.
+The desktop configs are **not** maintained in this organization: the equisdots
+org owns the stack (`equisdots/hyprland`, `equisdots/shell`,
+`equisdots/palettes`, `equisdots/theme-sync`, `equisdots/davincix`,
+`equisdots/timex`, `equisdots/login`, `equisdots/dots`, branch `main`) and the
+app configs come from `xscriptor-colors/terminal` (kitty/starship) and
+`xscriptor-colors/nvim`. All are used read-only; the official installer is
+`equisdots/dots`. A snapshot of the whole stack is vendored into the package
+for offline use. See `hyprland.md` and ADR-0005.
 
 ## Branch and status
 
@@ -68,3 +70,4 @@ the "distro installable" stage; remaining audit items for this repo include
 `x-base.packages` without a consumer, CLI polish, more unit coverage for the
 helpers/phases and WSL unification. Progress and decisions live in the
 `ROADMAP.md`/`DECISIONS.md` files at the workspace root (`x-lnux`).
+WSL lives in its dedicated repos: xlnux/wsl and xlnux/wsl-scripts.

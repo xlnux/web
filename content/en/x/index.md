@@ -1,5 +1,6 @@
 # X distribution repository
 
+
 This is the documentation index for the `x` repository (`xlnux/x`), the home
 of the **X** distribution (formerly known as *X Linux* / `x-linux`). X is a
 custom Arch Linux spin focused on simplicity, clean branding, and reproducible
@@ -43,7 +44,7 @@ renamed at some point, so older references to `x-linux` (the distro) or to an
 | `xlnux/x-repo` | X binary package repository (hosted on GitHub Pages, `[x]` in `pacman.conf`) plus the package portal. |
 | `xlnux/xpm` | X package manager (Rust). |
 | `xlnux/xpkg` | X packaging tool for developers (Rust). |
-| `xscriptor-colors/hyprland` | External source of the Hyprland/kitty/nvim configuration, consumed read-only by the Hyprland setup tool in `scripts`. |
+| `equisdots/*` | Org that owns the desktop stack (Hyprland Lua config, Quickshell shell, palettes, engines, SDDM login) consumed read-only by the Hyprland setup tool in `scripts`; its official installer is `equisdots/dots`. |
 
 Related documentation in this repository:
 
